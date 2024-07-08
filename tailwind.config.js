@@ -8,7 +8,8 @@ module.exports = {
         'BackgroundSp' : '#0C1821',
         'font' : '#E9EBEB',
         'star' : '#FFBA00',
-        'garis' : '#11325B'
+        'garis' : '#11325B',
+        'ig' : '#FC0079'
       },
       fontFamily : {
         rubik : ["Rubik Glitch Pop", "system-ui"],
