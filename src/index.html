@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <style>
+    .big-image {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transform: scale(0.95);
+    }
+
+    .big-image.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    #image-slider img {
+      opacity: 0.5;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    #image-slider img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-Background">
+  <div class="overflow-x-hidden">
+    <!-- Garis dekoratif -->
+    <div class="absolute top-40 -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform -rotate-12"></div>
+    <div class="absolute top-96 -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform -rotate-12"></div>
+    <div class="absolute top-[40rem] -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform -rotate-12"></div>
+    <div class="absolute right-0 top-40 -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform rotate-12"></div>
+    <div class="absolute right-0 top-96 -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform rotate-12"></div>
+    <div class="absolute right-0 top-[40rem] -z-10 h-[3px] w-[10%] rounded-t-[100%] bg-garis transform rotate-12"></div>
+  </div>
+
+  <div class="bg-BackgroundSp w-5/6 h-5/6 mx-auto rounded-xl">
+    <div class="text-font flex justify-between p-4 items-center">
+      <div class="w-24">
+        <img src="../asset/logo.png" alt="" class="w-full">
+      </div>
+      <nav class="w-80">
+        <ul class="flex justify-around">
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">Kids</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex gap-4">
+        <div class="w-10 h-10 bg-Background flex justify-center items-center rounded-full p-3">
+          <i class='bx bx-search-alt-2 text-xl'></i>
+        </div>
+        <div class="w-10 h-10 bg-Background flex justify-center items-center rounded-full p-3">
+          <i class='bx bx-shopping-bag text-xl'></i>
+        </div>
+      </div>
+    </div> 
+
+    <div class="text-font flex justify-between p-5 mt-8">
+      <div class="flex flex-col gap-7 justify-center text-2xl">
+        <i class='bx bxl-facebook hover:text-blue-400 cursor-pointer'></i>
+        <i class='bx bxl-twitter'></i>
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-github'></i>
+      </div>
+      <div class="relative w-1/2 z-50">
+        <img src="../asset/nike_1.png" alt="" class="w-full z-20 relative big-image show" id="bigImage1">
+        <img src="../asset/nike__2.png" alt="" class="w-full z-20 relative big-image hidden" id="bigImage2">
+        <img src="../asset/nike_3.png" alt="" class="w-full z-20 relative big-image hidden" id="bigImage3">
+        <img src="../asset/nike_4.png" alt="" class="w-full z-20 relative big-image hidden" id="bigImage4">
+      </div>
+      <div class="w-96">
+        <h1 class="font-bold text-5xl w-96 mb-5">Nike Air Max 270 Limited</h1>
+        <p class="font-normal opacity-80 text-sm mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe assumenda reprehenderit amet perspiciatis iusto fuga necessitatibus. Numquam, minima autem accusantium optio nihil sunt. Vero mollitia culpa, eius et omnis earum minima ea officia explicabo velit qui cum quibusdam, sit soluta.</p>
+        <p class="font-bold text-2xl mb-5">Rp.1000.000.000.00</p>
+        <span class="font-bold">Black/White/Red</span>
+        <div class="mt-1 mb-5">
+          <i class='bx bx-star text-star'></i>
+          <i class='bx bx-star text-star'></i>
+          <i class='bx bx-star text-star'></i>
+          <i class='bx bx-star text-star'></i>
+          <i class='bx bx-star'></i>
+        </div>
+        <div>
+          <button class="bg-Background w-36 h-12 rounded-xl font-bold text-base hover:bg-green-500">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex justify-between w-full pr-20 mt-4">
+      <h1 class="text-5xl text-font pl-20 font-rubik">NIKE AIR</h1>
+      <div class="flex items-center gap-4">
+        <button class="bg-Background p-2 rounded-full text-font">
+          <i class='bx bx-left-arrow-alt text-3xl'></i>
+        </button>
+        <div class="flex gap-2 overflow-hidden" id="image-slider">
+          <img src="../asset/nike_1.png" alt="" class="w-12 h-12 object-cover rounded">
+          <img src="../asset/nike__2.png" alt="" class="w-12 h-12 object-cover rounded">
+          <img src="../asset/nike_3.png" alt="" class="w-12 h-12 object-cover rounded">
+          <img src="../asset/nike_4.png" alt="" class="w-12 h-12 object-cover rounded">
+        </div>
+        <button class="bg-Background p-2 rounded-full text-font">
+          <i class='bx bx-right-arrow-alt text-3xl'></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const prevButton = document.querySelector('.bx-left-arrow-alt');
+    const nextButton = document.querySelector('.bx-right-arrow-alt');
+    const slider = document.getElementById('image-slider');
+    const bigImages = document.querySelectorAll('.big-image');
+
+    let currentImageIndex = 0;
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % slider.children.length;
+      updateSlider();
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + slider.children.length) % slider.children.length;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      for (let i = 0; i < slider.children.length; i++) {
+        slider.children[i].style.opacity = '0.5';
+        bigImages[i].classList.add('hidden');
+        bigImages[i].classList.remove('show');
+      }
+
+      slider.children[currentImageIndex].style.opacity = '1';
+      bigImages[currentImageIndex].classList.remove('hidden');
+      bigImages[currentImageIndex].classList.add('show');
+    }
+
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
+
+    updateSlider();
+  </script>
+</body>
+</html>
